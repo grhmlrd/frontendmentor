@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: Montserrat, sans-serif;
+}
+
+button {
+	all: unset;
+}
+
+body {
+	background-color: hsl(30, 38%, 92%);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+img.desktop-image {
+	max-width: 50%;
+	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+}
+
+img.mobile-image {
+	display: none;
+}
+
+article {
+	width: min(600px, 90%);
+	margin: 0 auto;
+	display: flex;
+	border-radius: 2rem;
+}
+
+section {
+	background-color: hsl(0, 0%, 100%);
+	padding: 24px;
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+}
+
+section h3 {
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 7px;
+	color: hsl(158, 36%, 37%);
+	font-size: clamp(15px, 15px + 2%, 20px);
+	font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+section h1 {
+	font-size: 30px;
+	font-family: Fraunces, serif;
+	margin: 20px 0;
+	color: hsl(212, 21%, 14%);
+	padding-right: 20px;
+}
+
+section p {
+	color: hsl(228, 12%, 48%);
+	font-weight: 500;
+}
+
+.pricing {
+	margin: 24px 0;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+.pricing .discounted-price {
+	color: hsl(158, 36%, 37%);
+	font-weight: 700;
+	font-size: 30px;
+	font-family: Fraunces, serif;
+}
+
+.pricing .original-price {
+	text-decoration: line-through;
+	text-decoration-color: hsl(228, 12%, 48%);
+	font-weight: 300;
+}
+
+section button {
+	background-color: hsl(158, 36%, 37%);
+	color: hsl(0, 0%, 100%);
+	width: 100%;
+	text-align: center;
+	padding: 1rem;
+	box-sizing: border-box;
+	border-radius: 1rem;
+	font-weight: 600;
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+.grhmlrd {
+	color: red;
+}
+
+@media (max-width: 700px) {
+	article {
+		flex-direction: column;
+	}
+
+	img.mobile-image {
+		display: block;
+		border-top-right-radius: 1rem;
+		border-top-left-radius: 1rem;
+	}
+
+	img.desktop-image {
+		display: none;
+	}
+
+	section {
+		border-radius: 0;
+		border-bottom-left-radius: 1rem;
+		border-bottom-right-radius: 1rem;
+	}
+
+	section h1 {
+		font-size: calc(1.3rem + 2vw);
+	}
+
+	section p {
+		font-size: calc(0.5rem + 1.5vw);
+	}
+}
