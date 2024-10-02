@@ -115,6 +115,12 @@ section p {
 	color: red;
 }
 
+img {
+	width: 50px;
+	display: block;
+	margin-left: auto;
+}
+
 @media (max-width: 600px) {
 	.container,
 	.middle {
